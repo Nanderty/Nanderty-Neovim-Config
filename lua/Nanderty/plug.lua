@@ -1,7 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call("plug#begin", "~/AppData/local/nvim/plugged")
 
-Plug 'mhinz/vim-startify'
+Plug 'echasnovski/mini.nvim'
+
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', {branch = '0.1.x'})
@@ -14,7 +15,7 @@ Plug 'navarasu/onedark.nvim'
 Plug('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 Plug 'lervag/vimtex'
-
+Plug 'sbdchd/neoformat'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'

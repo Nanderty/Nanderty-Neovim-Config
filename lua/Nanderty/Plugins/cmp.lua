@@ -30,11 +30,33 @@ cmp.setup({
 	window = {
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<C-b>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<C-e>'] = cmp.mapping.abort(),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if vim.fn.pumvisible() == 1 then
+				feedkey("<C-n>", "n")
+			elseif cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end, {
+		"i",
+	}),
+	["<S-Tab>"] = cmp.mapping(function(fallback)
+		if vim.fn.pumvisible() == 1 then
+			feedkey("<C-p>", "n")
+		elseif cmp.visible() then
+			cmp.select_prev_item()
+		else
+			fallback()
+		end
+	end, {
+	"i",
+}),
+['<C-b>'] = cmp.mapping.scroll_docs(-4),
+['<C-f>'] = cmp.mapping.scroll_docs(4),
+['<C-Space>'] = cmp.mapping.complete(),
+['<C-e>'] = cmp.mapping.abort(),
+['<CR>'] = cmp.mapping.confirm({ select = true }),
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
