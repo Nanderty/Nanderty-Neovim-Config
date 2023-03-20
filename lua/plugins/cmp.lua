@@ -7,7 +7,6 @@ return {
 	},
 	config = function()
 	    require('luasnip-latex-snippets').setup()
-	    require("luasnip.loaders.from_lua").lazy_load()
 	    require("luasnip.loaders.from_vscode").lazy_load()
 	end
     },
@@ -18,6 +17,7 @@ return {
 	    'hrsh7th/cmp-nvim-lsp',
 	    'hrsh7th/cmp-buffer',
 	    'hrsh7th/cmp-path',
+	    'hrsh7th/cmp-calc',
 	    'saadparwaiz1/cmp_luasnip',
 	},
 
@@ -48,7 +48,7 @@ return {
 
 		    ["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
-			    cmp.select_next_item()
+			cmp.select_next_item()
 			elseif luasnip.expand_or_jumpable() then
 			    luasnip.expand_or_jump()
 			elseif has_words_before() then
@@ -60,7 +60,7 @@ return {
 
 		    ["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
-			    cmp.select_prev_item()
+			cmp.select_prev_item()
 			elseif luasnip.jumpable(-1) then
 			    luasnip.jump(-1)
 			else
@@ -73,6 +73,7 @@ return {
 		    { name = 'luasnip' },
 		    { name = 'buffer' },
 		    { name = 'path' },
+		    { name = 'calc' },
 		})
 	    }
 	end,

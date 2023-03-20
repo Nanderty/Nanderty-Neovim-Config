@@ -16,7 +16,21 @@ return {
 			    return require('telescope.actions').close(...)
 			end,
 		    }
-		}
+		},
+		layout_config = {
+		    horizontal = {
+			prompt_position = "top",
+			preview_width = 0.55,
+			results_width = 0.8,
+		    },
+		    vertical = {
+			mirror = false,
+		    },
+		    width = 0.87,
+		    height = 0.80,
+		    preview_cutoff = 120,
+		},
+		borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
 	    },
 	    extensions = {
 		file_browser ={
@@ -41,6 +55,15 @@ return {
 	},
 	config = function()
 	    require('telescope').load_extension 'file_browser'
+	end,
+    },
+    {
+	dir = vim.fn.stdpath('data')..'/localplugins/telemini/',
+	keys = {
+	    { '<leader>ps', '<cmd>Telescope telemini<cr>', desc = 'sessions' }
+	},
+	config = function()
+	    require('telescope').load_extension 'telemini'
 	end,
     },
 }

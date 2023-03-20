@@ -23,17 +23,10 @@ return {
 	},
     },
     {
-	'JoseConseco/telescope_sessions_picker.nvim',
-	keys = {
-	    { '<leader>ps', '<cmd>Telescope sessions_picker<cr>', desc = 'session' },
+	'ludovicchabant/vim-gutentags',
+	event = {
+	    'BufReadPost',
+	    'BufNewFile'
 	},
-	dependencies = {
-	    'nvim-telescope/telescope.nvim',
-	    'nvim-lua/plenary.nvim',
-	    'nvim-tree/nvim-web-devicons',
-	},
-	config = function()
-	    require('telescope').load_extension 'sessions_picker'
-	end,
     },
 }
