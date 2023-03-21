@@ -5,10 +5,6 @@ return {
 	    'iurimateus/luasnip-latex-snippets.nvim',
 	    'rafamadriz/friendly-snippets',
 	},
-	opts = {
-	    history = true,
-	    delete_check_events = "TextChanged",
-	},
 	config = function()
 	    require('luasnip-latex-snippets').setup()
 	    require('luasnip.loaders.from_vscode').lazy_load()
@@ -23,7 +19,6 @@ return {
 	    'hrsh7th/cmp-path',
 	    'hrsh7th/cmp-calc',
 	    'saadparwaiz1/cmp_luasnip',
-	    'L3MON4D3/LuaSnip',
 	},
 
 	opts = function()
@@ -40,6 +35,7 @@ return {
 		history = true,
 		enable_autosnippets = true,
 	    })
+
 	    return {
 		snippet = {
 		    expand = function(args)
@@ -47,7 +43,9 @@ return {
 		    end,
 		},
 		mapping = cmp.mapping.preset.insert({
+
 		    ['<Space>'] = cmp.mapping.confirm({ select = false }),
+
 		    ['<Tab>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 			cmp.select_next_item()
@@ -85,5 +83,5 @@ return {
 		}
 	    }
 	end,
-    },
+    }, f
 }

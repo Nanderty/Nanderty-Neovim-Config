@@ -3,13 +3,17 @@ return {
 	'nvim-telescope/telescope.nvim',
 	keys = {
 	    { '<leader>pf', '<cmd>Telescope find_files<cr>', desc = 'find files' },
-	    { '<leader>pd', '<cmd>Telescope oldfiles<cr>', desc = 'oldfiles' },
+	    { '<leader>pd', '<cmd>Telescope oldfiles<cr>', desc = 'find oldfiles' },
 	    { '<leader>pg', '<cmd>Telescope live_grep<cr>', desc = 'grep files' },
+	    { '<leader>pb', '<cmd>Telescope buffers<cr>', desc = 'find buffers' },
 	},
-	dependencies = { 'nvim-lua/plenary.nvim' },
+	dependencies = {
+	    'nvim-lua/plenary.nvim',
+	    'nvim-tree/nvim-web-devicons',
+	    'nvim-telescope/telescope-fzf-native.nvim',
+	},
 	opts = {
 	    defaults = {
-		initial_mode = 'normal',
 		mappings = {
 		    n = {
 			['q'] = function(...)
@@ -19,7 +23,7 @@ return {
 		},
 		layout_config = {
 		    horizontal = {
-			prompt_position = "top",
+			prompt_position = 'top',
 			preview_width = 0.55,
 			results_width = 0.8,
 		    },
@@ -30,19 +34,15 @@ return {
 		    height = 0.80,
 		    preview_cutoff = 120,
 		},
-		borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
+		borderchars = { '█', ' ', '▀', '█', '█', ' ', ' ', '▀' },
 	    },
 	    extensions = {
-		file_browser ={
-		    hijack_netrw = true,
-		},
 		sessions_picker = {
 		    sessions_dir = vim.fn.stdpath('data') ..'/session/',
 		}
 	    },
 	},
     },
-
     {
 	'nvim-telescope/telescope-file-browser.nvim',
 	keys = {
@@ -50,8 +50,6 @@ return {
 	},
 	dependencies = {
 	    'nvim-telescope/telescope.nvim',
-	    'nvim-lua/plenary.nvim',
-	    'nvim-tree/nvim-web-devicons',
 	},
 	config = function()
 	    require('telescope').load_extension 'file_browser'
@@ -62,8 +60,20 @@ return {
 	keys = {
 	    { '<leader>ps', '<cmd>Telescope telemini<cr>', desc = 'sessions' }
 	},
+	dependencies = {
+	    'nvim-telescope/telescope.nvim',
+	},
 	config = function()
 	    require('telescope').load_extension 'telemini'
 	end,
     },
+    {
+	'nvim-telescope/telescope-fzf-native.nvim',
+	build = 'make',
+	config = function()
+	    require('telescope').load_extension 'fzf'
+	end,
+    },
+    { 'nvim-tree/nvim-web-devicons',},
+    { 'nvim-lua/plenary.nvim',},
 }
