@@ -1,11 +1,5 @@
 return {
 	{
-		'sbdchd/neoformat',
-		keys = {
-			{ '<leader>i', '<cmd>Neoformat<cr>', desc = 'format' },
-		},
-	},
-	{
 		'neomake/neomake',
 		event = {
 			'BufReadPost',

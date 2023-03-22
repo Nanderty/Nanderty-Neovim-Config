@@ -1,19 +1,20 @@
 return {
-    {
-	'loctvl842/monokai-pro.nvim',
-	lazy = false,
-	priority = 1000,
-	config = function()
-	    require("monokai-pro").setup({
-		background_clear = {},
-		override = function(c)
-		    return {
-			TelescopePreviewDate = { fg = c.base.red , bg = transparent_bg },
-			TelescopePreviewDirectory = { fg = c.base.white , bg = transparent_bg },
-		    }
-		end
-	    })
-	    vim.cmd([[colorscheme monokai-pro]])
-	end,
-    },
+	{
+		'rose-pine/neovim',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require('rose-pine').setup({
+				variant = 'dawn',
+				highlight_groups = {
+					TelescopePromptNormal = { fg = 'base', bg = 'rose' },
+					TelescopePromptBorder = { bg = 'rose' },
+					TelescopePromptTitle = { fg = 'base' },
+					TelescopePromptPrefix = { fg = 'base' },
+					TelescopePromptCounter = { fg = 'base' },
+				},
+			})
+			vim.cmd('colorscheme rose-pine')
+		end,
+	},
 }

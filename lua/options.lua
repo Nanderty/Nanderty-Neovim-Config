@@ -12,6 +12,8 @@ vim.opt.undofile = true
 vim.opt.undodir = { vim.fn.stdpath('data')..'/undo' }
 vim.opt.undolevels = 1000
 
+vim.opt.fillchars='eob: '
+
 vim.opt.showmode = false
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 4
