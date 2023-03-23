@@ -1,15 +1,5 @@
 return {
 	{
-		'neomake/neomake',
-		event = {
-			'BufReadPost',
-			'BufNewFile'
-		},
-		config = function()
-			vim.call('neomake#configure#automake', 'nrwi', '500')
-		end,
-	},
-	{
 		'tpope/vim-fugitive',
 		event = {
 			'BufReadPost',

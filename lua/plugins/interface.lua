@@ -23,6 +23,14 @@ return {
 			options = {
 				theme = 'rose-pine'
 			},
+			sections = {
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {}
+			},
+			inactive_sections = {
+				lualine_x = {},
+			},
 		},
 	},
 	{
