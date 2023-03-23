@@ -10,7 +10,7 @@ return {
 		},
 		opts = {
 			options = {
-				diagnostics = "nvim_lsp",
+				diagnostics = 'nvim_lsp',
 				always_show_bufferline = false,
 				buffer_close_icon = ' ',
 			},
@@ -44,12 +44,12 @@ return {
 		},
 		opts = {
 			signs = {
-				add = { text = " ▎" },
-				change = { text = " ▎" },
-				delete = { text = " " },
-				topdelete = { text = " " },
-				changedelete = { text = " ▎" },
-				untracked = { text = " ▎" },
+				add = { text = ' │' },
+				change = { text = ' │' },
+				delete = { text = ' │' },
+				topdelete = { text = ' │' },
+				changedelete = { text = ' │' },
+				untracked = { text = ' │' },
 			},
 		},
 	},

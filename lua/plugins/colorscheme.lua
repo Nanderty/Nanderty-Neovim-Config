@@ -12,6 +12,10 @@ return {
 					TelescopePromptTitle = { fg = 'base' },
 					TelescopePromptPrefix = { fg = 'base' },
 					TelescopePromptCounter = { fg = 'base' },
+					TelescopePreviewNormal = { bg = 'overlay' },
+					TelescopePreviewBorder = { bg = 'overlay' },
+					TelescopeResultsNormal = { bg = 'overlay' },
+					TelescopeResultsBorder = { bg = 'overlay' },
 				},
 			})
 			vim.cmd('colorscheme rose-pine')
