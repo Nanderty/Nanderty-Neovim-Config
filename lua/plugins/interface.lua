@@ -15,10 +15,6 @@ return {
 				buffer_close_icon = ' ',
 			},
 		},
-		config = function(_, opts)
-			local highlights = require('rose-pine.plugins.bufferline')
-			require('bufferline').setup(opts,{ highlights = highlights })
-		end
 	},
 	{
 		'nvim-lualine/lualine.nvim',
@@ -46,8 +42,15 @@ return {
 			'BufReadPost',
 			'BufNewFile'
 		},
-		config = function()
-			require('gitsigns').setup()
-		end,
+		opts = {
+			signs = {
+				add = { text = " ▎" },
+				change = { text = " ▎" },
+				delete = { text = " " },
+				topdelete = { text = " " },
+				changedelete = { text = " ▎" },
+				untracked = { text = " ▎" },
+			},
+		},
 	},
 }
