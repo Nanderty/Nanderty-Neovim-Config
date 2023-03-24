@@ -74,6 +74,4 @@ return {
 			require('telescope').load_extension 'fzf'
 		end,
 	},
-	{ 'nvim-tree/nvim-web-devicons', },
-	{ 'nvim-lua/plenary.nvim', },
 }
