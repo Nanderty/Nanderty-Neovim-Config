@@ -33,6 +33,25 @@ return {
 				local hl = "DiagnosticSign" .. type
 				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 			end
+			vim.diagnostic.config({
+				update_in_insert = true,
+				virtual_text = false,
+			})
+			vim.api.nvim_create_autocmd("CursorHold", {
+				buffer = bufnr,
+				callback = function()
+					local opts = {
+						header = '',
+						source = 'always',
+						border = {{' '},{' '},{' '},{' '}},
+						focusable = false,
+						close_events = { "BufLeave", "CursorMoved", "InsertEnter", },
+						prefix = ' ',
+						scope = 'cursor',
+					}
+					vim.diagnostic.open_float(nil, opts)
+				end
+			})
 		end,
 	},
 }
