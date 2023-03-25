@@ -6,7 +6,7 @@ return {
 		init = function()
 			vim.opt.spelllang = { 'de_de', 'en_us' }
 
-			vim.opt.timeoutlen = 500
+			vim.opt.timeoutlen = 250
 			vim.opt.updatetime = 250
 			vim.opt.mouse = a
 			vim.opt.signcolumn = 'yes'
