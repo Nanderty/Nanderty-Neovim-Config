@@ -36,11 +36,6 @@ return {
 				},
 				borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
 			},
-			extensions = {
-				sessions_picker = {
-					sessions_dir = vim.fn.stdpath('data') .. '/session/',
-				}
-			},
 		},
 	},
 	{
@@ -53,18 +48,6 @@ return {
 		},
 		config = function()
 			require('telescope').load_extension 'file_browser'
-		end,
-	},
-	{
-		dir = vim.fn.stdpath('data') .. '/localplugins/telemini/',
-		keys = {
-			{ '<leader>ps', '<cmd>Telescope telemini<cr>', desc = 'sessions' }
-		},
-		dependencies = {
-			'nvim-telescope/telescope.nvim',
-		},
-		config = function()
-			require('telescope').load_extension 'telemini'
 		end,
 	},
 	{

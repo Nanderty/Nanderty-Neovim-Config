@@ -14,7 +14,7 @@ return {
 		},
 		config = function(_, opts)
 			require('luasnip').config.set_config(opts)
-			require('luasnip.loaders.from_lua').lazy_load({ paths = vim.fn.stdpath('config') .. '/Snippets/' })
+			require('luasnip.loaders.from_lua').lazy_load({ paths = vim.fn.stdpath('config') .. '/lua/Snippets/' })
 		end
 	},
 	{
@@ -23,7 +23,7 @@ return {
 		dependencies = {
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-buffer',
-			'hrsh7th/cmp-path',
+			'FelipeLema/cmp-async-path',
 			'hrsh7th/cmp-calc',
 			'saadparwaiz1/cmp_luasnip',
 			'L3MON4D3/LuaSnip',
@@ -55,7 +55,7 @@ return {
 					{ name = 'nvim_lsp' },
 					{ name = 'luasnip' },
 					{ name = 'buffer' },
-					{ name = 'path' },
+					{ name = 'async_path' },
 					{ name = 'calc' },
 				}),
 				formatting = {

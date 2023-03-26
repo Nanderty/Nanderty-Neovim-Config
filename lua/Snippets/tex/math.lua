@@ -1,6 +1,5 @@
-local in_mathzone = function()
-	return vim.fn['vimtex#syntax#in_mathzone']() == 1
-end
+local tex = require('Snippets.luasniphelperslatex')
+local helper = require('Snippets.luasniphelpers')
 
 return {
 	s({ trig = '/', snippetType = 'autosnippet' },
@@ -11,7 +10,7 @@ return {
 				i(2),
 			}
 		),
-		{ condition = in_mathzone }
+		{ condition = tex.in_mathzone }
 	),
 	s({ trig = "in", snippetType = "autosnippet" },
 		fmta(
@@ -21,10 +20,10 @@ return {
 				i(2),
 			}
 		),
-		{ condition = in_mathzone }
+		{ condition = tex.in_mathzone }
 	),
 	s({ trig = 'df', snippetType = 'autosnippet' },
 		{ t('\\diff ') },
-		{ condition = in_mathzone }
+		{ condition = tex.in_mathzone }
 	),
 }
