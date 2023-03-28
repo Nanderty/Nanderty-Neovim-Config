@@ -9,7 +9,7 @@ return {
 				i(1),
 			}
 		),
-		{ condition = line_begin }
+		{ condition = helper.line_begin }
 	),
 	s({ trig = "hh", snippetType = "autosnippet" },
 		fmta(
@@ -19,5 +19,24 @@ return {
 				i(2),
 			}
 		)
+	),
+	s({ trig = "upa", snippetType = "autosnippet" },
+		fmta(
+			'\\usepackage{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = helper.line_begin }
+	),
+	s({ trig = "opa", snippetType = "autosnippet" },
+		fmta(
+			'\\usepackage[<>]{<>}',
+			{
+				i(1),
+				i(2),
+			}
+		),
+		{ condition = helper.line_begin }
 	),
 }
