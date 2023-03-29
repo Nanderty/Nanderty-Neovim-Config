@@ -14,4 +14,10 @@ return {
 		},
 		{ condition = tex.in_mathzone }
 	),
+	s({ trig = "app", snippetType = "autosnippet" },
+		{
+			t("\\approx"),
+		},
+		{ condition = tex.in_mathzone }
+	),
 }

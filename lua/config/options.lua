@@ -18,6 +18,7 @@ return {
 			vim.opt.undodir = { vim.fn.stdpath('data') .. '/undo' }
 			vim.opt.undolevels = 1000
 
+			vim.opt.cmdheight = 0
 			vim.opt.fillchars = 'eob: '
 
 			vim.opt.showmode = false

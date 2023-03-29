@@ -22,9 +22,9 @@ return {
 	s({ trig = 'enu', snippetType = 'autosnippet' },
 		fmta(
 			[[
-\begin{enumerate*}
+\begin{enumerate}
 	\item <>
-\end{enumerate*}
+\end{enumerate}
 ]],
 			{
 				i(1),

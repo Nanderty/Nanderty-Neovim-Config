@@ -22,8 +22,25 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+	s({ trig = "tex", snippetType = "autosnippet" },
+		fmta(
+			'\\text{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
 	s({ trig = 'df', snippetType = 'autosnippet' },
 		{ t('\\diff ') },
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'ple', snippetType = 'autosnippet' },
+		{ t('\\left(') },
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'pri', snippetType = 'autosnippet' },
+		{ t('\\right)') },
 		{ condition = tex.in_mathzone }
 	),
 }
