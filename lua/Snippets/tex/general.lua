@@ -2,7 +2,7 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
-	s({ trig = "sec", snippetType = "autosnippet" },
+	s({ trig = 'sec', snippetType = 'autosnippet' },
 		fmta(
 			'\\section*{<>}',
 			{
@@ -11,7 +11,7 @@ return {
 		),
 		{ condition = helper.line_begin }
 	),
-	s({ trig = "hh", snippetType = "autosnippet" },
+	s({ trig = 'hh', snippetType = 'autosnippet' },
 		fmta(
 			'\\SI{<>}{<>}',
 			{
@@ -20,7 +20,7 @@ return {
 			}
 		)
 	),
-	s({ trig = "upa", snippetType = "autosnippet" },
+	s({ trig = 'upa', snippetType = 'autosnippet' },
 		fmta(
 			'\\usepackage{<>}',
 			{
@@ -29,7 +29,7 @@ return {
 		),
 		{ condition = helper.line_begin }
 	),
-	s({ trig = "opa", snippetType = "autosnippet" },
+	s({ trig = 'opa', snippetType = 'autosnippet' },
 		fmta(
 			'\\usepackage[<>]{<>}',
 			{
@@ -38,5 +38,14 @@ return {
 			}
 		),
 		{ condition = helper.line_begin }
+	),
+	s({ trig = '^', snippetType = 'autosnippet' },
+		fmta(
+			'^{<>}',
+				{
+					i(1),
+				}
+			),
+		{ condition = tex.in_mathzone }
 	),
 }

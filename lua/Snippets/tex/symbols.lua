@@ -2,21 +2,21 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
-	s({ trig = "pi", snippetType = "autosnippet" },
+	s({ trig = 'pi', snippetType = 'autosnippet' },
 		{
-			t("\\pi"),
+			t('\\pi'),
 		},
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = "0eps", snippetType = "autosnippet" },
+	s({ trig = '0eps', snippetType = 'autosnippet' },
 		{
-			t("\\epsilon_0"),
+			t('\\epsilon_0'),
 		},
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = "app", snippetType = "autosnippet" },
+	s({ trig = 'app', snippetType = 'autosnippet' },
 		{
-			t("\\approx"),
+			t('\\approx'),
 		},
 		{ condition = tex.in_mathzone }
 	),
