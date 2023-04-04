@@ -2,6 +2,12 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
+s({ trig = 'new', snippetType = 'autosnippet' },
+		{
+			t('\\newpage'),
+		},
+		{ condition = helper.line_begin }
+	),
 	s({ trig = 'sec', snippetType = 'autosnippet' },
 		fmta(
 			'\\section*{<>}',

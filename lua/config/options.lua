@@ -8,7 +8,7 @@ return {
 
 			vim.opt.timeoutlen = 250
 			vim.opt.updatetime = 250
-			vim.opt.mouse = a
+			vim.opt.mouse = ''
 			vim.opt.signcolumn = 'yes'
 			vim.opt.cursorline = true
 			vim.opt.wrap = false

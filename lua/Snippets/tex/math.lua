@@ -35,11 +35,11 @@ return {
 		{ t('\\diff ') },
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = 'ple', snippetType = 'autosnippet' },
+	s({ trig = 'ble', snippetType = 'autosnippet' },
 		{ t('\\left(') },
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = 'pri', snippetType = 'autosnippet' },
+	s({ trig = 'bri', snippetType = 'autosnippet' },
 		{ t('\\right)') },
 		{ condition = tex.in_mathzone }
 	),
