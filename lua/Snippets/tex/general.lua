@@ -45,13 +45,4 @@ s({ trig = 'new', snippetType = 'autosnippet' },
 		),
 		{ condition = helper.line_begin }
 	),
-	s({ trig = '^', snippetType = 'autosnippet' },
-		fmta(
-			'^{<>}',
-				{
-					i(1),
-				}
-			),
-		{ condition = tex.in_mathzone }
-	),
 }
