@@ -2,6 +2,30 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
+	s({ trig = 'chi', snippetType = 'autosnippet' },
+		{
+			t('\\chi'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'sig', snippetType = 'autosnippet' },
+		{
+			t('\\sigma'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'nu', snippetType = 'autosnippet' },
+		{
+			t('\\nu'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'alp', snippetType = 'autosnippet' },
+		{
+			t('\\alpha'),
+		},
+		{ condition = tex.in_mathzone }
+	),
 	s({ trig = 'del', snippetType = 'autosnippet' },
 		{
 			t('\\delta '),
@@ -89,6 +113,12 @@ return {
 	s({ trig = 'neq', snippetType = 'autosnippet' },
 		{
 			t('\\neq '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'Ria', snippetType = 'autosnippet' },
+		{
+			t('\\Rightarrow'),
 		},
 		{ condition = tex.in_mathzone }
 	),

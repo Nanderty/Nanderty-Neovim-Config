@@ -6,7 +6,7 @@ return {
 		priority = 1000,
 		config = function()
 			require('rose-pine').setup({
-				variant = 'dawn',
+				variant = 'moon',
 				highlight_groups = {
 					TelescopePromptNormal = { fg = 'base', bg = 'rose' },
 					TelescopePromptBorder = { bg = 'rose' },
@@ -17,6 +17,9 @@ return {
 					TelescopePreviewBorder = { bg = 'overlay' },
 					TelescopeResultsNormal = { bg = 'overlay' },
 					TelescopeResultsBorder = { bg = 'overlay' },
+				},
+				groups = {
+					background = 'none',
 				},
 			})
 			vim.cmd('colorscheme rose-pine')

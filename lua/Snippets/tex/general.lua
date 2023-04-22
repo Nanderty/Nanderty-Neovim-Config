@@ -17,6 +17,24 @@ s({ trig = 'new', snippetType = 'autosnippet' },
 		),
 		{ condition = helper.line_begin }
 	),
+	s({ trig = 'ssec', snippetType = 'autosnippet' },
+		fmta(
+			'\\subsection*{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = helper.line_begin }
+	),
+	s({ trig = 'nsec', snippetType = 'autosnippet' },
+		fmta(
+			'\\newpage\\section*{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = helper.line_begin }
+	),
 	s({ trig = 'hh', snippetType = 'autosnippet' },
 		fmta(
 			'\\SI{<>}{<>}',
@@ -25,6 +43,26 @@ s({ trig = 'new', snippetType = 'autosnippet' },
 				i(2),
 			}
 		)
+	),
+	s({ trig = 'bf', snippetType = 'autosnippet' },
+		fmta(
+			'\\textbf{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+	s({ trig = 'cite', snippetType = 'autosnippet' },
+		fmta(
+			'\\supercite{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+	s({ trig = 'ite', snippetType = 'autosnippet' },
+		{ t('\\item') },
+		{ condition = helper.line_begin }
 	),
 	s({ trig = 'upa', snippetType = 'autosnippet' },
 		fmta(

@@ -20,6 +20,7 @@ return {
 
 			vim.opt.cmdheight = 0
 			vim.opt.fillchars = 'eob: '
+			vim.opt.relativenumber = true
 
 			vim.opt.showmode = false
 			vim.opt.smartindent = true

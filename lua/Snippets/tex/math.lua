@@ -20,7 +20,17 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = "in", snippetType = "autosnippet" },
+	s({ trig = "sum", snippetType = "autosnippet" },
+		fmta(
+			'\\sum_{<>}^{<>}',
+			{
+				i(1),
+				i(2),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = "int", snippetType = "autosnippet" },
 		fmta(
 			'\\int_{<>}^{<>}',
 			{
@@ -29,6 +39,14 @@ return {
 			}
 		),
 		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'nn', snippetType = 'autosnippet' },
+		fmta(
+			'\\num{<>}',
+			{
+				i(1),
+			}
+		)
 	),
 	s({ trig = "tex", snippetType = "autosnippet" },
 		fmta(
@@ -57,11 +75,30 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+	s({ trig = "ove", snippetType = "autosnippet" },
+		fmta(
+			'\\overline{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
 	s({ trig = 'öö', snippetType = 'autosnippet' },
 		fmta(
 			'^{<>}',
 				{
 					i(1),
+				}
+			),
+		{ condition = tex.in_mathzone }
+	),
+	s({ trig = 'gg', snippetType = 'autosnippet' },
+		fmta(
+			'\\sqrt[<>]{<>}',
+				{
+					i(1),
+					i(2),
 				}
 			),
 		{ condition = tex.in_mathzone }
