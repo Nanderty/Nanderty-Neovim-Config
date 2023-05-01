@@ -2,6 +2,7 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
+
 	s({ trig = '$', snippetType = 'autosnippet' },
 		fmta(
 			'$<>$',
@@ -10,6 +11,17 @@ return {
 			}
 		)
 	),
+
+	s({ trig = "tex", snippetType = "autosnippet" },
+		fmta(
+			'\\text{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = '/', snippetType = 'autosnippet' },
 		fmta(
 			'\\frac{<>}{<>}',
@@ -20,6 +32,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "sum", snippetType = "autosnippet" },
 		fmta(
 			'\\sum_{<>}^{<>}',
@@ -30,6 +43,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "int", snippetType = "autosnippet" },
 		fmta(
 			'\\int_{<>}^{<>}',
@@ -40,6 +54,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = 'nn', snippetType = 'autosnippet' },
 		fmta(
 			'\\num{<>}',
@@ -48,15 +63,16 @@ return {
 			}
 		)
 	),
-	s({ trig = "tex", snippetType = "autosnippet" },
+
+	s({ trig = 'mcl', snippetType = 'autosnippet' },
 		fmta(
-			'\\text{<>}',
+			'\\mathcal{<>}',
 			{
 				i(1),
 			}
-		),
-		{ condition = tex.in_mathzone }
+		)
 	),
+
 	s({ trig = "vec", snippetType = "autosnippet" },
 		fmta(
 			'\\vec{<>}',
@@ -66,6 +82,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "hat", snippetType = "autosnippet" },
 		fmta(
 			'\\hat{<>}',
@@ -84,34 +101,38 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = 'öö', snippetType = 'autosnippet' },
 		fmta(
 			'^{<>}',
-				{
-					i(1),
-				}
-			),
+			{
+				i(1),
+			}
+		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = 'gg', snippetType = 'autosnippet' },
 		fmta(
 			'\\sqrt[<>]{<>}',
-				{
-					i(1),
-					i(2),
-				}
-			),
+			{
+				i(1),
+				i(2),
+			}
+		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = 'll', snippetType = 'autosnippet' },
 		fmta(
 			'_{<>}',
-				{
-					i(1),
-				}
-			),
+			{
+				i(1),
+			}
+		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "bb", snippetType = "autosnippet" },
 		fmta(
 			'\\left(<>\\right)',
@@ -121,10 +142,12 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = 'df', snippetType = 'autosnippet' },
-		{ t('\\diff ') },
+		{ t('\\,d') },
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "sin", snippetType = "autosnippet" },
 		fmta(
 			'\\sin{<>}',
@@ -134,6 +157,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "cos", snippetType = "autosnippet" },
 		fmta(
 			'\\cos{<>}',
@@ -143,6 +167,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
 	s({ trig = "tan", snippetType = "autosnippet" },
 		fmta(
 			'\\tan{<>}',

@@ -20,9 +20,6 @@ return {
 		'nvim-lualine/lualine.nvim',
 		event = 'VeryLazy',
 		opts = {
-			options = {
-				theme = 'rose-pine'
-			},
 			sections = {
 				lualine_x = {},
 				lualine_y = {},

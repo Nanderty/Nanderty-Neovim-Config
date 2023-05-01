@@ -34,7 +34,7 @@ return {
 					height = 0.80,
 					preview_cutoff = 120,
 				},
-				borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+				borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
 			},
 		},
 	},
