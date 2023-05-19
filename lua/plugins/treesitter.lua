@@ -10,7 +10,7 @@ return {
 	    auto_install = true,
 	    ignore_install = { 'latex' },
 	    highlight = { enable = true },
-	    indent = { enable = true, disable = { 'python' } },  
+	    indent = { enable = true, disable = { 'python' } },
 	    ensure_installed = {
 		'javascript',
 		'python',

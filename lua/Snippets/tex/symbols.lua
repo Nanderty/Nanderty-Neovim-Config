@@ -59,9 +59,23 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'perp', snippetType = 'autosnippet' },
+		{
+			t('\\perp '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = 'Ria', snippetType = 'autosnippet' },
 		{
 			t('\\Rightarrow '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = 'to', snippetType = 'autosnippet' },
+		{
+			t('\\to '),
 		},
 		{ condition = tex.in_mathzone }
 	),

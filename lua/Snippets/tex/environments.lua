@@ -2,7 +2,7 @@ local helper = require('Snippets.luasniphelpers')
 local helper = require('Snippets.luasniphelpers')
 
 return {
-	-- variable environment
+
 	s({ trig = 'beg', snippetType = 'autosnippet' },
 		fmta(
 			[[
@@ -18,7 +18,7 @@ return {
 		),
 		{ condition = helper.line_begin }
 	),
-	-- enumerate environment
+
 	s({ trig = 'enu', snippetType = 'autosnippet' },
 		fmta(
 			[[
@@ -32,7 +32,7 @@ return {
 		),
 		{ condition = helper.line_begin }
 	),
-	-- align environment
+
 	s({ trig = 'ali', snippetType = 'autosnippet' },
 		fmta(
 			[[

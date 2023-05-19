@@ -44,6 +44,16 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = "lim", snippetType = "autosnippet" },
+		fmta(
+			'\\lim_{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = "int", snippetType = "autosnippet" },
 		fmta(
 			'\\int_{<>}^{<>}',
@@ -150,7 +160,7 @@ return {
 
 	s({ trig = "sin", snippetType = "autosnippet" },
 		fmta(
-			'\\sin{<>}',
+			'\\sin{(<>)}',
 			{
 				i(1),
 			}
@@ -160,7 +170,7 @@ return {
 
 	s({ trig = "cos", snippetType = "autosnippet" },
 		fmta(
-			'\\cos{<>}',
+			'\\cos{(<>)}',
 			{
 				i(1),
 			}
@@ -170,7 +180,27 @@ return {
 
 	s({ trig = "tan", snippetType = "autosnippet" },
 		fmta(
-			'\\tan{<>}',
+			'\\tan{(<>)}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "det", snippetType = "autosnippet" },
+		fmta(
+			'\\det{(<>)}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "ln", snippetType = "autosnippet" },
+		fmta(
+			'\\ln{(<>)}',
 			{
 				i(1),
 			}

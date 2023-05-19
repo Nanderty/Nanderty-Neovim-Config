@@ -131,14 +131,14 @@ return {
 
 	s({ trig = 'lam', snippetType = 'autosnippet' },
 		{
-			t('\\lam '),
+			t('\\lambda '),
 		},
 		{ condition = tex.in_mathzone }
 	),
 
 	s({ trig = 'Lam', snippetType = 'autosnippet' },
 		{
-			t('\\Lam '),
+			t('\\Lambda '),
 		},
 		{ condition = tex.in_mathzone }
 	),
