@@ -9,7 +9,7 @@ return {
 \begin{figure}[h]
 	\centering
 	\chemfig {
-	<>
+		<>
 	}
 	\caption{<>}
 	\label{fig:<>}

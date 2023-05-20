@@ -2,7 +2,7 @@ local tex = require('Snippets.luasniphelperslatex')
 local helper = require('Snippets.luasniphelpers')
 
 return {
-	s({ trig = 'chg', snippetType = 'autosnippet' },
+	s({ trig = 'chmr', snippetType = 'autosnippet' },
 		fmta(
 			'\\ch{ <> ->>[ <> ][ <> ] <> }\\par',
 			{
@@ -14,11 +14,21 @@ return {
 		)
 	),
 
-	s({ trig = 'chs', snippetType = 'autosnippet' },
+	s({ trig = 'chmi', snippetType = 'autosnippet' },
 		fmta(
 			'\\ch{ <> }',
 			{
 				i(1),
+			}
+		)
+	),
+
+	s({ trig = 'chrg', snippetType = 'autosnippet' },
+		fmta(
+			'\\charge{<>}{<>}',
+			{
+				i(1),
+				i(2),
 			}
 		)
 	),
