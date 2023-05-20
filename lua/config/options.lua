@@ -18,9 +18,11 @@ return {
 			vim.opt.undodir = { vim.fn.stdpath('data') .. '/undo' }
 			vim.opt.undolevels = 1000
 
+			vim.opt.relativenumber = true
 			vim.opt.cmdheight = 0
 			vim.opt.fillchars = 'eob: '
-			vim.opt.relativenumber = true
+			vim.opt.fillchars = 'fold: '
+			vim.opt.fillchars = 'vert: '
 
 			vim.opt.showmode = false
 			vim.opt.smartindent = true
@@ -31,7 +33,6 @@ return {
 			vim.opt.scrolloff = 20
 			vim.opt.numberwidth = 5
 			vim.opt.termguicolors = true
-			vim.opt.guifont = { 'Hack NFM:h12' }
 		end,
 	},
 }

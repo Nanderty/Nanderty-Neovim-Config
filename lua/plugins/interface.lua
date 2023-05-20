@@ -1,34 +1,53 @@
 return {
 	{
-		'akinsho/bufferline.nvim',
-		event = {
-			'BufReadPost',
-			'BufNewFile'
-		},
-		dependencies = {
-			'nvim-tree/nvim-web-devicons',
-		},
-		opts = {
-			options = {
-				diagnostics = 'nvim_lsp',
-				always_show_bufferline = false,
-				buffer_close_icon = ' ',
-			},
-		},
-	},
-	{
 		'nvim-lualine/lualine.nvim',
 		event = 'VeryLazy',
-		opts = {
-			sections = {
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = {}
-			},
-			inactive_sections = {
-				lualine_x = {},
-			},
-		},
+		config = function()
+			vim.api.nvim_set_hl(0, 'StatusLine', { bg = nil })
+			vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = nil })
+
+			local monokai_pro = require("lualine.themes.monokai-pro")
+			monokai_pro.normal.b.bg = nil
+			monokai_pro.normal.c.bg = nil
+			monokai_pro.normal.c.fg = nil
+			monokai_pro.inactive.z = {
+				bg = nil,
+				fg = require("monokai-pro.colorscheme").colors.base.yellow,
+			}
+
+			local function separator()
+				return [[separator]]
+			end
+
+			require('lualine').setup {
+				options = {
+					theme = monokai_pro,
+				},
+				sections = {
+					lualine_b = {
+						'branch',
+						{
+							'diagnostics',
+							symbols = {
+								error = 'E',
+								warn = 'W',
+								info = 'I',
+								hint = 'H'
+							},
+						},
+					},
+					lualine_c = {},
+					lualine_x = {},
+					lualine_y = {},
+					lualine_z = {
+						'buffers',
+					},
+				},
+				inactive_sections = {
+					lualine_x = {},
+				},
+			}
+		end,
 	},
 	{
 		'lukas-reineke/indent-blankline.nvim',

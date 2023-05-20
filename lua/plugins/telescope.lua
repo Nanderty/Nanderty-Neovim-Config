@@ -48,7 +48,7 @@ return {
 	{
 		'nvim-telescope/telescope-file-browser.nvim',
 		keys = {
-			{ '<leader>v', '<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>', desc = 'file tree' },
+			{ '<leader>v', function(...) require('telescope').extensions.file_browser.file_browser(...) end, desc = 'file tree' },
 		},
 		dependencies = {
 			'nvim-telescope/telescope.nvim',
