@@ -8,7 +8,7 @@ return {
 			require('monokai-pro').setup({
 				plugins = {
 					indent_blankline = {
-						context_highlight = "pro",
+						context_highlight = 'pro',
 					},
 				},
 				override = function(c)
