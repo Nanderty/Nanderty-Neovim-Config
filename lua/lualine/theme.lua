@@ -1,34 +1,34 @@
-local colors = require("monokai-pro.colorscheme").colors
+local colors = require('monokai-pro.colorscheme').colors
 
 local monokai_pro = {}
 
 monokai_pro.normal = {
-  a = { bg = colors.base.yellow, fg = colors.base.black, gui = "bold" },
-  b = { bg = nil, fg = colors.base.yellow },
-  c = {
-    bg = nil,
-    fg = colors.statusBar.activeForeground,
-  },
+	a = { bg = colors.base.yellow, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.yellow },
+	c = { bg = colors.editor.background, fg = colors.editor.background },
+	x = { bg = colors.editor.background, fg = colors.editor.background },
+	y = { bg = colors.editor.background, fg = colors.editor.background },
+	z = { bg = colors.base.red, fg = colors.base.black, gui = 'bold' },
 }
 
 monokai_pro.insert = {
-  a = { bg = colors.base.cyan, fg = colors.base.black },
-  b = { bg = colors.editor.background, fg = colors.base.cyan },
+	a = { bg = colors.base.cyan, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.cyan },
 }
 
-
 monokai_pro.visual = {
-  a = { bg = colors.base.magenta, fg = colors.base.black },
-  b = { bg = colors.editor.background, fg = colors.base.magenta },
+	a = { bg = colors.base.magenta, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.magenta },
 }
 
 monokai_pro.replace = {
-  a = { bg = colors.base.red, fg = colors.base.black },
-  b = { bg = colors.base.dimmed5, fg = colors.base.red },
+	a = { bg = colors.base.green, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.green },
 }
 
 monokai_pro.inactive = {
-  z = { bg = colors.editor.background, fg = colors.base.yellow },
+	c = { bg = colors.editor.background, fg = colors.base.white },
+	z = { bg = colors.editor.background, fg = colors.base.red },
 }
 
 return monokai_pro
