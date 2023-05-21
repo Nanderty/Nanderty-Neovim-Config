@@ -15,10 +15,10 @@ return {
 					{
 						'diagnostics',
 						symbols = {
-							error = 'E',
-							warn = 'W',
-							info = 'I',
-							hint = 'H'
+							error = ' ',
+							warn = ' ',
+							hint = ' ',
+							info = ' ',
 						},
 					},
 				},
@@ -47,7 +47,8 @@ return {
 		config = function(_, opts)
 			require('lualine').setup(opts)
 			vim.api.nvim_set_hl(0, 'StatusLine', { bg = require('monokai-pro.colorscheme').colors.editor.background })
-			vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = require('monokai-pro.colorscheme').colors.editor.backgroundnil })
+			vim.api.nvim_set_hl(0, 'StatusLineNC',
+				{ bg = require('monokai-pro.colorscheme').colors.editor.backgroundnil })
 		end,
 	},
 	{
