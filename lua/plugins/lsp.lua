@@ -41,9 +41,10 @@ return {
 				buffer = bufnr,
 				callback = function()
 					local opts = {
+						pad_top = 1,
+						pad_bottom = 1,
 						header = '',
 						source = 'always',
-						border = {{' '},{' '},{' '},{' '}},
 						focusable = false,
 						close_events = { "BufLeave", "CursorMoved", "InsertEnter", },
 						prefix = ' ',

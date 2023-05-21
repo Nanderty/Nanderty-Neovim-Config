@@ -19,10 +19,12 @@ return {
 			vim.opt.undolevels = 1000
 
 			vim.opt.relativenumber = true
-			vim.opt.cmdheight = 0
 			vim.opt.fillchars = 'eob: '
 			vim.opt.fillchars = 'fold: '
 			vim.opt.fillchars = 'vert: '
+			vim.opt.cmdheight = 0
+			vim.cmd [[ autocmd RecordingEnter * set cmdheight=1 ]]
+			vim.cmd [[ autocmd RecordingLeave * set cmdheight=0 ]]
 
 			vim.opt.showmode = false
 			vim.opt.smartindent = true
