@@ -38,9 +38,18 @@ return {
 		)
 	),
 
-	s({ trig = 'bf', snippetType = 'autosnippet' },
+	s({ trig = 'bft', snippetType = 'autosnippet' },
 		fmta(
 			'\\textbf{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+
+	s({ trig = 'tlc', snippetType = 'autosnippet' },
+		fmta(
+			'\\textit{<>}',
 			{
 				i(1),
 			}

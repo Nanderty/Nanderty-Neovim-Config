@@ -65,7 +65,7 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = 'nn', snippetType = 'autosnippet' },
+	s({ trig = 'hhn', snippetType = 'autosnippet' },
 		fmta(
 			'\\num{<>}',
 			{

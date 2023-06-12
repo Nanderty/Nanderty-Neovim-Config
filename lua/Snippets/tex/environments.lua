@@ -3,7 +3,7 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
-	s({ trig = 'beg', snippetType = 'autosnippet' },
+	s({ trig = 'bgn', snippetType = 'autosnippet' },
 		fmta(
 			[[
 \begin{<>}
@@ -19,7 +19,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'ali', snippetType = 'autosnippet' },
+	s({ trig = 'lgn', snippetType = 'autosnippet' },
 		fmta(
 			[[
 \begin{align*}

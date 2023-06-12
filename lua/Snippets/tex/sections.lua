@@ -3,7 +3,7 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
-	s({ trig = 'sec', snippetType = 'autosnippet' },
+	s({ trig = 'sct', snippetType = 'autosnippet' },
 		fmta(
 			'\\section{<>}',
 			{
@@ -13,7 +13,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'nsec', snippetType = 'autosnippet' },
+	s({ trig = 'nsc', snippetType = 'autosnippet' },
 		fmta(
 			'\\newpage\\section{<>}',
 			{
@@ -23,7 +23,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'ssec', snippetType = 'autosnippet' },
+	s({ trig = 'ssc', snippetType = 'autosnippet' },
 		fmta(
 			'\\subsection{<>}',
 			{
@@ -33,7 +33,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'nssec', snippetType = 'autosnippet' },
+	s({ trig = 'nssc', snippetType = 'autosnippet' },
 		fmta(
 			'\\newpage\\subsection{<>}',
 			{
@@ -43,7 +43,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'ssec', snippetType = 'autosnippet' },
+	s({ trig = 'sss', snippetType = 'autosnippet' },
 		fmta(
 			'\\newpage\\subsubsection{<>}',
 			{
@@ -53,7 +53,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'nsssec', snippetType = 'autosnippet' },
+	s({ trig = 'nsss', snippetType = 'autosnippet' },
 		fmta(
 			'\\newpage\\subsubsection{<>}',
 			{

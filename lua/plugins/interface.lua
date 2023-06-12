@@ -1,5 +1,8 @@
 return {
 	{
+		'nvim-tree/nvim-web-devicons',
+	},
+	{
 		'nvim-lualine/lualine.nvim',
 		event = 'VeryLazy',
 		opts = {
@@ -50,32 +53,5 @@ return {
 			vim.api.nvim_set_hl(0, 'StatusLineNC',
 				{ bg = require('monokai-pro.colorscheme').colors.editor.backgroundnil })
 		end,
-	},
-	{
-		'lukas-reineke/indent-blankline.nvim',
-		event = {
-			'BufReadPost',
-			'BufNewFile'
-		},
-		opts = {
-			show_current_context = true,
-		},
-	},
-	{
-		'lewis6991/gitsigns.nvim',
-		event = {
-			'BufReadPost',
-			'BufNewFile'
-		},
-		opts = {
-			signs = {
-				add = { text = ' │' },
-				change = { text = ' │' },
-				delete = { text = ' │' },
-				topdelete = { text = ' │' },
-				changedelete = { text = ' │' },
-				untracked = { text = ' │' },
-			},
-		},
 	},
 }

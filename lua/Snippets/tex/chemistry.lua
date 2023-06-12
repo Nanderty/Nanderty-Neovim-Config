@@ -22,14 +22,4 @@ return {
 			}
 		)
 	),
-
-	s({ trig = 'chrg', snippetType = 'autosnippet' },
-		fmta(
-			'\\charge{<>}{<>}',
-			{
-				i(1),
-				i(2),
-			}
-		)
-	),
 }

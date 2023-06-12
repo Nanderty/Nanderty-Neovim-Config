@@ -11,9 +11,14 @@ return {
 			end)
 			vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
 			vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>')
-			vim.keymap.set('n', '<leader>e', [[<C-w>]])
 			vim.keymap.set('n', '<leader>p', [["+p]])
-			vim.keymap.set({ 'n', 'v' }, '<leader>y', [['+y]])
+			vim.keymap.set('v', '<leader>y', [["+y]])
+			vim.keymap.set('n', '<leader>y', [[<S-v>"+y]])
+
+			vim.keymap.set('n', '<leader>h', [[<C-w>h]])
+			vim.keymap.set('n', '<leader>j', [[<C-w>j]])
+			vim.keymap.set('n', '<leader>k', [[<C-w>k]])
+			vim.keymap.set('n', '<leader>l', [[<C-w>l]])
 		end,
 	},
 }

@@ -6,16 +6,13 @@ return {
 		config = function()
 			vim.opt.background = 'dark'
 			require('monokai-pro').setup({
-				plugins = {
-					indent_blankline = {
-						context_highlight = 'pro',
-					},
-				},
+				filter = 'octagon',
 				override = function(c)
 					return {
-						TelescopePromptNormal = { bg = c.base.dimmed3 },
+						TelescopeSelection = { bg = c.base.dimmed3 },
+						TelescopePromptNormal = { bg = c.base.dimmed3, fg = c.base.white },
 						TelescopePromptBorder = { bg = c.base.dimmed3, fg = c.base.dimmed3 },
-						TelescopeResultsNormal = { bg = c.base.dimmed5 },
+						TelescopeResultsNormal = { bg = c.base.dimmed5, fg = c.base.white },
 						TelescopeResultsBorder = { bg = c.base.dimmed5, fg = c.base.dimmed5 },
 						TelescopePreviewNormal = { bg = c.base.dimmed5 },
 						TelescopePreviewBorder = { bg = c.base.dimmed5, fg = c.base.dimmed5 },

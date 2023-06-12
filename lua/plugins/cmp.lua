@@ -24,7 +24,6 @@ return {
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-buffer',
 			'FelipeLema/cmp-async-path',
-			'hrsh7th/cmp-calc',
 			'saadparwaiz1/cmp_luasnip',
 			'L3MON4D3/LuaSnip',
 		},
@@ -56,7 +55,6 @@ return {
 					{ name = 'luasnip' },
 					{ name = 'buffer' },
 					{ name = 'async_path' },
-					{ name = 'calc' },
 				}),
 				formatting = {
 					format = function(_, item)
