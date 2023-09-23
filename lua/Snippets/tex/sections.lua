@@ -45,7 +45,7 @@ return {
 
 	s({ trig = 'sss', snippetType = 'autosnippet' },
 		fmta(
-			'\\newpage\\subsubsection{<>}',
+			'\\subsubsection{<>}',
 			{
 				i(1),
 			}

@@ -11,8 +11,7 @@ return {
 	\chemfig {
 		<>
 	}
-	\caption{
-		<>
+	\caption{<>
 	}
 	\label{fig:<>}
 \end{figure}
@@ -36,8 +35,7 @@ return {
 		<>
 	}
 	\schemestop
-	\caption{
-		<>
+	\caption{<>
 	}
 	\label{fig:<>}
 \end{figure}
@@ -59,8 +57,7 @@ return {
 	\includegraphics
 	[<>]
 	{<>}
-	\caption{
-		<>
+	\caption{<>
 	}
 	\label{fig:<>}
 \end{figure}
@@ -84,8 +81,7 @@ return {
 	{<>}
 	{!}
 	{\input{<>}}
-	\caption{
-		<>
+	\caption{<>
 	}
 	\label{fig:<>}
 \end{figure}
@@ -100,7 +96,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'sch', snippetType = 'autosnippet' },
+	s({ trig = 'scm', snippetType = 'autosnippet' },
 		fmta(
 			[[
 \schemestart
@@ -184,6 +180,27 @@ return {
 		{ condition = tex.in_figure }
 	),
 
+	s({ trig = 'brc', snippetType = 'autosnippet' },
+		fmta(
+			[[
+\polymerdelim[height = <>, depth = <>,
+	open xshift=<>, close xshift=<>,
+	indice = \!\!<>]
+	{op<>}{cl<>}
+]],
+			{
+				i(1),
+				i(2),
+				i(3),
+				i(4),
+				i(5),
+				i(6),
+				i(7),
+			}
+		),
+		{ condition = tex.in_figure }
+	),
+
 	s({ trig = 'nme', snippetType = 'autosnippet' },
 		fmta(
 			[[
@@ -206,6 +223,26 @@ return {
 
 	s({ trig = 'opl', snippetType = 'autosnippet' },
 		{ t('\\oplus') },
+		{ condition = tex.in_figure }
+	),
+
+	s({ trig = 'crp', snippetType = 'autosnippet' },
+		fmta(
+			[[(-[::<>,0.2,,,draw=none]\oplus)]],
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_figure }
+	),
+
+	s({ trig = 'crm', snippetType = 'autosnippet' },
+		fmta(
+			[[(-[::<>,0.2,,,draw=none]\ominus)]],
+			{
+				i(1),
+			}
+		),
 		{ condition = tex.in_figure }
 	),
 }

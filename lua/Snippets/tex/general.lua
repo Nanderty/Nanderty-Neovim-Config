@@ -21,14 +21,14 @@ return {
 		)
 	),
 
-	s({ trig = 'new', snippetType = 'autosnippet' },
+	s({ trig = 'nwp', snippetType = 'autosnippet' },
 		{
 			t('\\newpage'),
 		},
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'hh', snippetType = 'autosnippet' },
+	s({ trig = 'snt', snippetType = 'autosnippet' },
 		fmta(
 			'\\SI{<>}{<>}',
 			{
