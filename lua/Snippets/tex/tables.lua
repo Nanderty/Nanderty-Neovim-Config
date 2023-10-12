@@ -1,5 +1,4 @@
 local helper = require('Snippets.luasniphelpers')
-local helper = require('Snippets.luasniphelpers')
 
 return {
 
@@ -13,7 +12,7 @@ return {
 	\end{tabular}
 	\caption{<>
 	}
-	\label{fig:<>}
+	\label{tbl:<>}
 \end{table}
 ]],
 			{
@@ -36,7 +35,7 @@ return {
 	\end{tabularx}
 	\caption{<>
 	}
-	\label{fig:<>}
+	\label{tbl:<>}
 \end{table}
 ]],
 			{

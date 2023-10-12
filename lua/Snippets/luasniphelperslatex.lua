@@ -21,4 +21,8 @@ tex.in_figure = function()
 	return tex.in_env('figure')
 end
 
+tex.in_scheme = function()
+	return tex.in_env('scheme')
+end
+
 return tex

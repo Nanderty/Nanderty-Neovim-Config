@@ -32,4 +32,21 @@ return {
 		),
 		{ condition = helper.line_begin }
 	),
+
+	s({ trig = 'mnp', snippetType = 'autosnippet' },
+		fmta(
+			[[
+\begin{minipage}[<>]{<>\textwidth}
+	<>
+\end{minipage}
+]],
+			{
+				i(1),
+				i(2),
+				i(3),
+			}
+		),
+		{ condition = helper.line_begin }
+	),
+
 }

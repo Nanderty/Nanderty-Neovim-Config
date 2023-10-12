@@ -38,6 +38,17 @@ return {
 		)
 	),
 
+	s({ trig = 'srt', snippetType = 'autosnippet' },
+		fmta(
+			'\\SIrange{<>}{<>}{<>}',
+			{
+				i(1),
+				i(2),
+				i(3),
+			}
+		)
+	),
+
 	s({ trig = 'bft', snippetType = 'autosnippet' },
 		fmta(
 			'\\textbf{<>}',
@@ -47,7 +58,7 @@ return {
 		)
 	),
 
-	s({ trig = 'tlc', snippetType = 'autosnippet' },
+	s({ trig = 'tlt', snippetType = 'autosnippet' },
 		fmta(
 			'\\textit{<>}',
 			{
@@ -56,6 +67,24 @@ return {
 		)
 	),
 
+	s({ trig = 'spt', snippetType = 'autosnippet' },
+		fmta(
+			'\\textsuperscript{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+
+
+	s({ trig = 'sbt', snippetType = 'autosnippet' },
+		fmta(
+			'\\textsubscript{<>}',
+			{
+				i(1),
+			}
+		)
+	),
 	s({ trig = 'cte', snippetType = 'autosnippet' },
 		fmta(
 			'\\supercite{<>}',
