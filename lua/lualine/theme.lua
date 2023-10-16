@@ -3,8 +3,8 @@ local colors = require('monokai-pro.colorscheme').colors
 local monokai_pro = {}
 
 monokai_pro.normal = {
-	a = { bg = colors.base.yellow, fg = colors.base.black, gui = 'bold' },
-	b = { bg = colors.editor.background, fg = colors.base.yellow },
+	a = { bg = colors.base.green, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.green },
 	c = { bg = colors.editor.background, fg = colors.editor.background },
 	x = { bg = colors.editor.background, fg = colors.editor.background },
 	y = { bg = colors.editor.background, fg = colors.editor.background },
@@ -22,8 +22,8 @@ monokai_pro.visual = {
 }
 
 monokai_pro.replace = {
-	a = { bg = colors.base.green, fg = colors.base.black, gui = 'bold' },
-	b = { bg = colors.editor.background, fg = colors.base.green },
+	a = { bg = colors.base.yellow, fg = colors.base.black, gui = 'bold' },
+	b = { bg = colors.editor.background, fg = colors.base.yellow },
 }
 
 monokai_pro.inactive = {

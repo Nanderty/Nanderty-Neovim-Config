@@ -6,7 +6,6 @@ return {
 		config = function()
 			vim.opt.background = 'dark'
 			require('monokai-pro').setup({
-				filter = 'octagon',
 				override = function(c)
 					return {
 						TelescopeSelection = { bg = c.base.dimmed3 },
