@@ -16,7 +16,6 @@ return {
 		end,
 	},
 	{
-
 		'NeogitOrg/neogit',
 		keys = {
 			{ '<leader>a', function() require('neogit').open() end, desc = 'git' },
@@ -24,7 +23,7 @@ return {
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 		},
-	  config = true
+		config = true
 	},
 	{
 		'ludovicchabant/vim-gutentags',
