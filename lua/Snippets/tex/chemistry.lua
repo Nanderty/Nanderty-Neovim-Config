@@ -35,4 +35,34 @@ return {
 			}
 		)
 	),
+
+	s({ trig = 'sbd', snippetType = 'autosnippet' },
+		fmta(
+			'-[::<>]',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'dbd', snippetType = 'autosnippet' },
+		fmta(
+			'=[::<>]',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'rrw', snippetType = 'autosnippet' },
+		fmta(
+			'@{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
 }

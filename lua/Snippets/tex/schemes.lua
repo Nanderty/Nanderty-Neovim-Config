@@ -30,9 +30,11 @@ return {
 \begin{scheme}[!h]
 	\centering
 	\schemestart
-	\chemfig {
-		<>
-	}
+		\chemname{
+			\chemfig {
+				<>
+			}
+		}{}
 	\schemestop
 	\caption{<>
 	}
@@ -187,11 +189,13 @@ return {
 		{ condition = tex.in_scheme }
 	),
 
-	s({ trig = 'crp', snippetType = 'autosnippet' },
+	s({ trig = 'nmbr', snippetType = 'autosnippet' },
 		fmta(
-			[[(-[::<>,0.4,,,draw=none]\oplus)]],
+			[[(-[::<>,0.4,,,draw=none]{\color{<>}<>})]],
 			{
 				i(1),
+				i(2),
+				i(3),
 			}
 		),
 		{ condition = tex.in_scheme }
@@ -199,9 +203,21 @@ return {
 
 	s({ trig = 'crm', snippetType = 'autosnippet' },
 		fmta(
-			[[(-[::<>,0.4,,,draw=none]\ominus)]],
+			[[\charge{<>=$\ominus$}{<>}]],
 			{
 				i(1),
+				i(2),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'crp', snippetType = 'autosnippet' },
+		fmta(
+			[[\charge{<>=$\oplus$}{<>}]],
+			{
+				i(1),
+				i(2),
 			}
 		),
 		{ condition = tex.in_scheme }

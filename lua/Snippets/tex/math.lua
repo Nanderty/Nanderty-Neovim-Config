@@ -207,4 +207,14 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
+	s({ trig = "xpn", snippetType = "autosnippet" },
+		fmta(
+			'e^{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
 }

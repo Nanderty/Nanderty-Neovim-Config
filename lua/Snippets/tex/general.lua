@@ -49,7 +49,7 @@ return {
 		)
 	),
 
-	s({ trig = 'bft', snippetType = 'autosnippet' },
+	s({ trig = 'tbf', snippetType = 'autosnippet' },
 		fmta(
 			'\\textbf{<>}',
 			{
@@ -58,7 +58,7 @@ return {
 		)
 	),
 
-	s({ trig = 'tlt', snippetType = 'autosnippet' },
+	s({ trig = 'tlc', snippetType = 'autosnippet' },
 		fmta(
 			'\\textit{<>}',
 			{
@@ -85,7 +85,7 @@ return {
 			}
 		)
 	),
-	s({ trig = 'cte', snippetType = 'autosnippet' },
+	s({ trig = 'spc', snippetType = 'autosnippet' },
 		fmta(
 			'\\supercite{<>}',
 			{
