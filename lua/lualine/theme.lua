@@ -1,4 +1,4 @@
-local colors = require('monokai-pro.colorscheme').colors
+local colors = require('monokai-pro.colorscheme')
 
 local monokai_pro = {}
 

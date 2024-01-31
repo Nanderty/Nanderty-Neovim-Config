@@ -12,7 +12,7 @@ return {
 		)
 	),
 
-	s({ trig = "tex", snippetType = "autosnippet" },
+	s({ trig = "txt", snippetType = "autosnippet" },
 		fmta(
 			'\\text{<>}',
 			{
@@ -102,7 +102,7 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
-	s({ trig = "ove", snippetType = "autosnippet" },
+	s({ trig = "vrl", snippetType = "autosnippet" },
 		fmta(
 			'\\overline{<>}',
 			{
@@ -122,7 +122,7 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = 'gg', snippetType = 'autosnippet' },
+	s({ trig = 'sqr', snippetType = 'autosnippet' },
 		fmta(
 			'\\sqrt[<>]{<>}',
 			{
@@ -143,7 +143,21 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = "bb", snippetType = "autosnippet" },
+	s({ trig = "ngl", snippetType = "autosnippet" },
+		{
+			t('\\langle '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "ngr", snippetType = "autosnippet" },
+		{
+			t('\\rangle '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "lr", snippetType = "autosnippet" },
 		fmta(
 			'\\left(<>\\right)',
 			{
@@ -154,13 +168,13 @@ return {
 	),
 
 	s({ trig = 'df', snippetType = 'autosnippet' },
-		{ t('\\,d') },
+		{ t('\\,d ') },
 		{ condition = tex.in_mathzone }
 	),
 
 	s({ trig = "sin", snippetType = "autosnippet" },
 		fmta(
-			'\\sin{(<>)}',
+			'\\sin{\\left(<>\\right)}',
 			{
 				i(1),
 			}
@@ -170,7 +184,7 @@ return {
 
 	s({ trig = "cos", snippetType = "autosnippet" },
 		fmta(
-			'\\cos{(<>)}',
+			'\\cos{\\left(<>\\right)}',
 			{
 				i(1),
 			}
@@ -180,7 +194,7 @@ return {
 
 	s({ trig = "tan", snippetType = "autosnippet" },
 		fmta(
-			'\\tan{(<>)}',
+			'\\tan{\\left(<>\\right)}',
 			{
 				i(1),
 			}
@@ -208,7 +222,7 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = "xpn", snippetType = "autosnippet" },
+	s({ trig = "exp", snippetType = "autosnippet" },
 		fmta(
 			'e^{<>}',
 			{

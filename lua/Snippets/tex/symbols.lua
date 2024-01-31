@@ -17,6 +17,13 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'hbr', snippetType = 'autosnippet' },
+		{
+			t('\\hbar '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = 'cdo', snippetType = 'autosnippet' },
 		{
 			t('\\cdot '),
@@ -27,6 +34,20 @@ return {
 	s({ trig = 'tim', snippetType = 'autosnippet' },
 		{
 			t('\\times '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = 'div', snippetType = 'autosnippet' },
+		{
+			t('\\div'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = 'nn', snippetType = 'autosnippet' },
+		{
+			t('\\in'),
 		},
 		{ condition = tex.in_mathzone }
 	),

@@ -17,7 +17,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'ite', snippetType = 'autosnippet' },
+	s({ trig = 'itm', snippetType = 'autosnippet' },
 		{ t('\\item') },
 		{ condition = tex.in_enumerate * helper.line_begin }
 	),

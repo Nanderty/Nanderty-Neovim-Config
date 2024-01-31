@@ -25,11 +25,4 @@ return {
 		},
 		config = true
 	},
-	{
-		'ludovicchabant/vim-gutentags',
-		event = {
-			'BufReadPost',
-			'BufNewFile'
-		},
-	},
 }

@@ -67,7 +67,7 @@ return {
 		)
 	),
 
-	s({ trig = 'spt', snippetType = 'autosnippet' },
+	s({ trig = 'tsp', snippetType = 'autosnippet' },
 		fmta(
 			'\\textsuperscript{<>}',
 			{
@@ -77,7 +77,7 @@ return {
 	),
 
 
-	s({ trig = 'sbt', snippetType = 'autosnippet' },
+	s({ trig = 'tsb', snippetType = 'autosnippet' },
 		fmta(
 			'\\textsubscript{<>}',
 			{

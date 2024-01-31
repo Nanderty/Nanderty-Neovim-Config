@@ -8,6 +8,7 @@ return {
 			vim.g.vimtex_view_method = 'zathura_simple'
 			vim.g.vimtex_fold_enabled = 1
 			vim.g.vimtex_fold_manual = 1
+			vim.g.vimtex_complete_bib_simple = 1
 		end,
 	},
 }
