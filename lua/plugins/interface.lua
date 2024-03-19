@@ -58,8 +58,9 @@ return {
 		config = function(_, opts)
 			require('lualine').setup(opts)
 			vim.api.nvim_set_hl(0, 'StatusLine', { bg = require('monokai-pro.colorscheme').editor.background })
-			vim.api.nvim_set_hl(0, 'StatusLineNC',
-				{ bg = require('monokai-pro.colorscheme').editor.backgroundnil })
+			vim.api.nvim_set_hl(0, 'StatusLineNC', {
+				bg = require('monokai-pro.colorscheme').editor.backgroundnil
+			})
 		end,
 	},
 }

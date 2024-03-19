@@ -2,10 +2,22 @@ return {
 	{
 		'nvim-telescope/telescope.nvim',
 		keys = {
-			{ '<leader>f', function() require('telescope.builtin').find_files() end, desc = 'find files' },
-			{ '<leader>g', function() require('telescope.builtin').live_grep() end, desc = 'find files' },
-			{ '<leader>d', function() require('telescope.builtin').oldfiles() end, desc = 'find oldfiles' },
-			{ '<leader>b', function() require('telescope.builtin').buffers() end, desc = 'find buffers' },
+			{
+				'<leader>f',
+				function() require('telescope.builtin').find_files() end, desc = 'find files'
+			},
+			{
+				'<leader>g',
+				function() require('telescope.builtin').live_grep() end, desc = 'find files'
+			},
+			{
+				'<leader>d',
+				function() require('telescope.builtin').oldfiles() end, desc = 'find oldfiles'
+			},
+			{
+				'<leader>b',
+				function() require('telescope.builtin').buffers() end, desc = 'find buffers'
+			},
 		},
 		dependencies = {
 			'nvim-lua/plenary.nvim',

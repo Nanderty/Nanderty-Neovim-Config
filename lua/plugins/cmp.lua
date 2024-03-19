@@ -3,8 +3,14 @@ return {
 		'L3MON4D3/LuaSnip',
 		event = 'InsertEnter',
 		keys = {
-			{ 'jj', function() require('luasnip').jump(1) end,  mode = 'i' },
-			{ 'kk', function() require('luasnip').jump(-1) end, mode = 'i' },
+			{
+				'jj',
+				function() require('luasnip').jump(1) end,  mode = 'i'
+			},
+			{
+				'kk',
+				function() require('luasnip').jump(-1) end, mode = 'i'
+			},
 		},
 		opts = {
 			history = true,

@@ -1,6 +1,7 @@
 return {
 	{
 		'nvim-treesitter/nvim-treesitter',
+		main = 'nvim-treesitter.configs',
 		build = ':TSUpdate',
 		event = {
 		    'BufReadPost',
@@ -11,7 +12,7 @@ return {
 		    ignore_install = { 'latex' },
 		    highlight = {
 				enable = true,
-				additional_vim_regex_highlighting = { 'latex' },
+				additional_vim_regex_highlighting = { 'tex' },
 			},
 		    indent = { enable = true, disable = { 'python' } },
 		    ensure_installed = {
@@ -25,9 +26,6 @@ return {
 			'css',
 		    },
 		},
-		config = function(_, opts)
-			require('nvim-treesitter.configs').setup(opts)
-		end,
     },
 	{
 		'luckasRanarison/tree-sitter-hyprlang',
