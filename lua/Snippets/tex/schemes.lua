@@ -203,7 +203,7 @@ return {
 
 	s({ trig = 'crm', snippetType = 'autosnippet' },
 		fmta(
-			[[\charge{<>=$\ominus$}{<>}]],
+			[[\charge{<>=\ominus}{<>}]],
 			{
 				i(1),
 				i(2),
@@ -214,7 +214,7 @@ return {
 
 	s({ trig = 'crp', snippetType = 'autosnippet' },
 		fmta(
-			[[\charge{<>=$\oplus$}{<>}]],
+			[[\charge{<>=\oplus}{<>}]],
 			{
 				i(1),
 				i(2),

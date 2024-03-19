@@ -11,7 +11,7 @@ return {
 		    ignore_install = { 'latex' },
 		    highlight = {
 				enable = true,
-				additional_vim_regex_highlighting = false,
+				additional_vim_regex_highlighting = { 'latex' },
 			},
 		    indent = { enable = true, disable = { 'python' } },
 		    ensure_installed = {
@@ -26,7 +26,7 @@ return {
 		    },
 		},
 		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
+			require('nvim-treesitter.configs').setup(opts)
 		end,
     },
 	{

@@ -167,6 +167,13 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'mdl', snippetType = 'autosnippet' },
+		{
+			t('\\middle'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = 'df', snippetType = 'autosnippet' },
 		{ t('\\,d ') },
 		{ condition = tex.in_mathzone }
@@ -225,6 +232,26 @@ return {
 	s({ trig = "exp", snippetType = "autosnippet" },
 		fmta(
 			'e^{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "bra", snippetType = "autosnippet" },
+		fmta(
+			'\\Bra{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "ket", snippetType = "autosnippet" },
+		fmta(
+			'\\Ket{<>}',
 			{
 				i(1),
 			}

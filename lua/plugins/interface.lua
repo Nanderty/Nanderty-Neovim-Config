@@ -3,6 +3,14 @@ return {
 		'nvim-tree/nvim-web-devicons',
 	},
 	{
+		'mcauley-penney/visual-whitespace.nvim',
+		event = {
+			'BufReadPre',
+			'BufNewFile'
+		},
+		config = true
+	},
+	{
 		'nvim-lualine/lualine.nvim',
 		event = 'VeryLazy',
 		opts = {

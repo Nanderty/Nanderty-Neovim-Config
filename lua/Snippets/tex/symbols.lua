@@ -59,6 +59,13 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'plm', snippetType = 'autosnippet' },
+		{
+			t('\\pm '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = 'leq', snippetType = 'autosnippet' },
 		{
 			t('\\leq '),
