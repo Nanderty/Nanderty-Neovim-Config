@@ -18,28 +18,22 @@ return {
 				desc = 'delete session'
 			},
 		},
-		config = function()
-			require('mini.sessions').setup({
-				force = {
-					read = false,
-					write = true,
-					delete = true,
-				},
-			})
-		end,
+		opts = {
+			force = {
+				delete = true,
+			},
+		},
 	},
 	{
 		'echasnovski/mini.starter',
 		event = 'VimEnter',
-		config = function()
-			require('mini.starter').setup({
-				evaluate_single = true,
-				silent = true,
-				items = {
-					require('mini.starter').sections.sessions(10, true),
-				},
-			})
-		end,
+		opts = {
+			evaluate_single = true,
+			silent = true,
+			items = {
+				function() return require('mini.starter').sections.sessions(10, true) end,
+			},
+		}
 	},
 	{
 		'echasnovski/mini.indentscope',
