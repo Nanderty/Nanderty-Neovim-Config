@@ -64,7 +64,7 @@ return {
 		{ condition = tex.in_scheme }
 	),
 
-	s({ trig = 'ssc', snippetType = 'autosnippet' },
+	s({ trig = 'sbsch', snippetType = 'autosnippet' },
 		fmta(
 			[[
 \subscheme {
@@ -94,11 +94,54 @@ return {
 
 	s({ trig = 'arr', snippetType = 'autosnippet' },
 		fmta(
-			'\\arrow(<>){<>}[<>]',
+			'\\arrow{<>}[<>]',
+			{
+				i(1),
+				i(2),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'chlr', snippetType = 'autosnippet' },
+		fmta(
+			[[
+\chemleft{<>}
+	<>
+\chemright{<>}
+			]],
 			{
 				i(1),
 				i(2),
 				i(3),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'nmi', snippetType = 'autosnippet' },
+		fmta(
+			[[
+\chemnameinit{
+	<>
+}
+			]],
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_scheme }
+	),
+
+	s({ trig = 'pbx', snippetType = 'autosnippet' },
+		fmta(
+			[[\parbox{<>}{
+	<>
+}
+			]],
+			{
+				i(1),
+				i(2),
 			}
 		),
 		{ condition = tex.in_scheme }
@@ -175,11 +218,22 @@ return {
 		{ condition = tex.in_scheme }
 	),
 
-	s({ trig = 'rfr', snippetType = 'autosnippet' },
+	s({ trig = 'lbl', snippetType = 'autosnippet' },
 		fmta(
-			[[ \ref{fig:<>}]],
+			'\\label{<>:<>}',
 			{
 				i(1),
+				i(2),
+			}
+		)
+	),
+
+	s({ trig = 'rfr', snippetType = 'autosnippet' },
+		fmta(
+			[[ \cref{<>:<>}]],
+			{
+				i(1),
+				i(2),
 			}
 		)
 	),

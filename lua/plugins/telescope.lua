@@ -4,19 +4,23 @@ return {
 		keys = {
 			{
 				'<leader>f',
-				function() require('telescope.builtin').find_files() end, desc = 'find files'
+				function() require('telescope.builtin').find_files() end,
+				desc = 'find files'
 			},
 			{
 				'<leader>g',
-				function() require('telescope.builtin').live_grep() end, desc = 'find files'
+				function() require('telescope.builtin').live_grep() end,
+				desc = 'find files'
 			},
 			{
 				'<leader>d',
-				function() require('telescope.builtin').oldfiles() end, desc = 'find oldfiles'
+				function() require('telescope.builtin').oldfiles() end,
+				desc = 'find oldfiles'
 			},
 			{
 				'<leader>b',
-				function() require('telescope.builtin').buffers() end, desc = 'find buffers'
+				function() require('telescope.builtin').buffers() end,
+				desc = 'find buffers'
 			},
 		},
 		dependencies = {
@@ -47,6 +51,10 @@ return {
 			},
 			extensions = {
 				file_browser = {
+					hidden = {
+						file_browser = true,
+						folder_browser = true,
+					},
 					mappings = {
 						['n'] = {
 							['h'] = function(...) require('telescope').extensions.file_browser.actions.goto_parent_dir(...) end,

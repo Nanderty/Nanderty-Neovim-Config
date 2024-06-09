@@ -28,9 +28,9 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'snt', snippetType = 'autosnippet' },
+	s({ trig = 'qnt', snippetType = 'autosnippet' },
 		fmta(
-			'\\SI{<>}{<>}',
+			'\\qty{<>}{<>}',
 			{
 				i(1),
 				i(2),
@@ -38,13 +38,22 @@ return {
 		)
 	),
 
-	s({ trig = 'srt', snippetType = 'autosnippet' },
+	s({ trig = 'qrt', snippetType = 'autosnippet' },
 		fmta(
-			'\\SIrange{<>}{<>}{<>}',
+			'\\qtyrange{<>}{<>}{<>}',
 			{
 				i(1),
 				i(2),
 				i(3),
+			}
+		)
+	),
+
+	s({ trig = 'snt', snippetType = 'autosnippet' },
+		fmta(
+			'\\unit{<>}',
+			{
+				i(1),
 			}
 		)
 	),
@@ -85,6 +94,7 @@ return {
 			}
 		)
 	),
+
 	s({ trig = 'spc', snippetType = 'autosnippet' },
 		fmta(
 			'\\supercite{<>}',

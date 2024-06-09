@@ -3,21 +3,69 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
+	s({ trig = 'dbg', snippetType = 'autosnippet' },
+		{
+			t('\\setchemfig{scheme debug=true}'),
+		},
+		{ condition = tex.in_scheme }
+	),
+
 	s({ trig = 'nvc', snippetType = 'autosnippet' },
 		{
 			t('\\invacuo '),
 		}
 	),
 
-	s({ trig = 'nmr', snippetType = 'autosnippet' },
-		{
-			t('\\NMR* '),
-		}
+	s({ trig = 'cmpd', snippetType = 'autosnippet' },
+		fmta(
+			'\\cmpd{<>}',
+			{
+				i(1),
+			}
+		)
 	),
 
-	s({ trig = 'chmr', snippetType = 'autosnippet' },
+	s({ trig = 'cnp', snippetType = 'autosnippet' },
 		fmta(
-			'\\ch{ <> ->>[ <> ][ <> ] <> }\\par',
+			'\\cip{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+
+	s({ trig = 'nmr', snippetType = 'autosnippet' },
+		fmta(
+			'\\NMR*{<>, <>}',
+			{
+				i(1),
+				i(2),
+			}
+		)
+	),
+
+	s({ trig = 'stp', snippetType = 'autosnippet' },
+		fmta(
+			'\\isotope*{<>,<>}',
+			{
+				i(1),
+				i(2),
+			}
+		)
+	),
+
+	s({ trig = 'jpc', snippetType = 'autosnippet' },
+		fmta(
+			'\\iupac{<>}',
+			{
+				i(1),
+			}
+		)
+	),
+
+	s({ trig = 'cpnd', snippetType = 'autosnippet' },
+		fmta(
+			'(\\cmpd{<>}, \\SI{<>}{\\gram}, \\SI{<>}{\\milli\\mol}, \\SI{<>}{\\equiv})',
 			{
 				i(1),
 				i(2),
