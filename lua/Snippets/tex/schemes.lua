@@ -228,7 +228,7 @@ return {
 		)
 	),
 
-	s({ trig = 'rfrr', snippetType = 'autosnippet' },
+	s({ trig = 'rfr', snippetType = 'autosnippet' },
 		fmta(
 			[[ \cref{<>:<>}]],
 			{
