@@ -1,7 +1,7 @@
 return {
 	{
-		dir = '',
-		name = 'keybinds',
+		dir = ' ',
+		name = 'keymaps',
 		lazy = false,
 		init = function()
 			vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
