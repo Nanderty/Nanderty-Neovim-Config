@@ -1,6 +1,5 @@
 return {
 	{
-
 		dir = ' ',
 		name = 'keymaps',
 		lazy = false,
