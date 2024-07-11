@@ -63,4 +63,17 @@ return {
 			})
 		end,
 	},
+	{
+		'mei28/qfc.nvim',
+		event = {
+			'BufReadPre',
+			'BufNewFile'
+		},
+		config = function()
+			require('qfc').setup({
+			timeout = 10000,
+			autoclose = true,
+			})
+		end
+	},
 }

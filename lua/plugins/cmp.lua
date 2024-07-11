@@ -62,7 +62,7 @@ return {
 				}),
 				formatting = {
 					format = function(_, item)
-						item.kind = (require('icons').kinds[item.kind] or ' ') .. item.kind
+						item.kind = string.format('%s %s',(require('icons').kinds[item.kind] or ' '), item.kind)
 						return item
 					end
 				}
