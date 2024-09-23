@@ -179,6 +179,20 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'bgg', snippetType = 'autosnippet' },
+		{
+			t('\\bigg'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = 'rvr', snippetType = 'autosnippet' },
+		{
+			t('\\rvert'),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = "sin", snippetType = "autosnippet" },
 		fmta(
 			'\\sin{\\left(<>\\right)}',

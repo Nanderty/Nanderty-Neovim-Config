@@ -28,6 +28,13 @@ return {
 		{ condition = helper.line_begin }
 	),
 
+	s({ trig = 'clp', snippetType = 'autosnippet' },
+		{
+			t('\\clearpage'),
+		},
+		{ condition = helper.line_begin }
+	),
+
 	s({ trig = 'qnt', snippetType = 'autosnippet' },
 		fmta(
 			'\\qty{<>}{<>}',
@@ -45,6 +52,15 @@ return {
 				i(1),
 				i(2),
 				i(3),
+			}
+		)
+	),
+
+	s({ trig = 'snr', snippetType = 'autosnippet' },
+		fmta(
+			'\\num{<>}',
+			{
+				i(1),
 			}
 		)
 	),

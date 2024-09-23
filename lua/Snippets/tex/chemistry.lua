@@ -65,7 +65,7 @@ return {
 
 	s({ trig = 'cpnd', snippetType = 'autosnippet' },
 		fmta(
-			'(\\cmpd{<>}, \\SI{<>}{\\gram}, \\SI{<>}{\\milli\\mol}, \\SI{<>}{\\equiv})',
+			'(\\cmpd{<>}, \\qty{<>}{\\gram}, \\qty{<>}{\\milli\\mol}, \\qty{<>}{\\equiv})',
 			{
 				i(1),
 				i(2),
