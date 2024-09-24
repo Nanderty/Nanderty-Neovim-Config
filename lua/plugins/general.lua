@@ -15,14 +15,4 @@ return {
 			})
 		end,
 	},
-	{
-		'NeogitOrg/neogit',
-		keys = {
-			{ '<leader>a', function() require('neogit').open() end, desc = 'git' },
-		},
-		dependencies = {
-			'nvim-lua/plenary.nvim',
-		},
-		config = true
-	},
 }

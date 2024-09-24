@@ -19,6 +19,8 @@ return {
 			vim.keymap.set('n', '<leader>j', [[<C-w>j]])
 			vim.keymap.set('n', '<leader>k', [[<C-w>k]])
 			vim.keymap.set('n', '<leader>l', [[<C-w>l]])
+			vim.keymap.set('n', '<leader>a', vim.diagnostic.setloclist)
+			vim.keymap.set('n', '<leader>c', '<cmd>ccl<cr>')
 		end,
 	},
 }
