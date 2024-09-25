@@ -9,7 +9,7 @@ return {
 				linenumber_bg = colors.bg
 			}
 			vim.g.newpaper_custom_highlights = {
-				CursorLineNr = { bg = colors.bg, fg = colors.cursor_nr_fg },
+				CursorLineNr = { bg = colors.bg, fg = colors.lightgray },
 				TelescopePromptTitle = { bg = colors.telescope_fg, fg = colors.lightorange },
 				TelescopePromptPrefix = { fg = colors.lightorange },
 				TelescopePromptCounter = { fg = colors.lightorange },
