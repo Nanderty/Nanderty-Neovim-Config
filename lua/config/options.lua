@@ -19,9 +19,7 @@ return {
 			vim.opt.undolevels = 1000
 
 			vim.opt.relativenumber = true
-			vim.opt.fillchars = 'eob: '
-			vim.opt.fillchars = 'fold: '
-			vim.opt.fillchars = 'vert: '
+			vim.opt.fillchars = 'eob: ,fold: ,vert: '
 			vim.opt.cmdheight = 0
 			vim.cmd [[ autocmd RecordingEnter * set cmdheight=1 ]]
 			vim.cmd [[ autocmd RecordingLeave * set cmdheight=0 ]]
