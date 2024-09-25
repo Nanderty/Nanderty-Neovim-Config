@@ -15,7 +15,7 @@ return {
 		event = 'VeryLazy',
 		opts = {
 			options = {
-				theme = function() return require('lualine.theme-newpaper') end,
+				theme = function() return require('lualine.theme-monokai') end,
 			},
 			sections = {
 				lualine_a = {
@@ -57,9 +57,9 @@ return {
 		},
 		config = function(_, opts)
 			require('lualine').setup(opts)
-			vim.api.nvim_set_hl(0, 'StatusLine', { bg = require('newpaper').bg })
+			vim.api.nvim_set_hl(0, 'StatusLine', { bg = require('monokai-pro.colorscheme').editor.background })
 			vim.api.nvim_set_hl(0, 'StatusLineNC', {
-				bg = require('newpaper').bg
+				bg = require('monokai-pro.colorscheme').editor.backgroundnil
 			})
 		end,
 	},
