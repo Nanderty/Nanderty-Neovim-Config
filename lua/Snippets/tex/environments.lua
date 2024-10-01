@@ -1,5 +1,4 @@
 local helper = require('Snippets.luasniphelpers')
-local helper = require('Snippets.luasniphelpers')
 
 return {
 

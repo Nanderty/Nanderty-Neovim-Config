@@ -174,6 +174,13 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
+	s({ trig = 'str', snippetType = 'autosnippet' },
+		{
+			t('\\star '),
+		},
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = 'df', snippetType = 'autosnippet' },
 		{ t('\\,d ') },
 		{ condition = tex.in_mathzone }
@@ -181,14 +188,14 @@ return {
 
 	s({ trig = 'bgg', snippetType = 'autosnippet' },
 		{
-			t('\\bigg'),
+			t('\\bigg '),
 		},
 		{ condition = tex.in_mathzone }
 	),
 
 	s({ trig = 'rvr', snippetType = 'autosnippet' },
 		{
-			t('\\rvert'),
+			t('\\rvert '),
 		},
 		{ condition = tex.in_mathzone }
 	),

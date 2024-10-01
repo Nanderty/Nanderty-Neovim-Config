@@ -3,6 +3,27 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
+	s({ trig = 'tbc', snippetType = 'autosnippet' },
+		{
+			t('\\tableofcontents'),
+		},
+		{ condition = helper.line_begin }
+	),
+
+	s({ trig = 'nwp', snippetType = 'autosnippet' },
+		{
+			t('\\newpage'),
+		},
+		{ condition = helper.line_begin }
+	),
+
+	s({ trig = 'clp', snippetType = 'autosnippet' },
+		{
+			t('\\clearpage'),
+		},
+		{ condition = helper.line_begin }
+	),
+
 	s({ trig = 'vsp', snippetType = 'autosnippet' },
 		fmta(
 			'\\vspace{<>}',
@@ -19,20 +40,6 @@ return {
 				i(1),
 			}
 		)
-	),
-
-	s({ trig = 'nwp', snippetType = 'autosnippet' },
-		{
-			t('\\newpage'),
-		},
-		{ condition = helper.line_begin }
-	),
-
-	s({ trig = 'clp', snippetType = 'autosnippet' },
-		{
-			t('\\clearpage'),
-		},
-		{ condition = helper.line_begin }
 	),
 
 	s({ trig = 'qnt', snippetType = 'autosnippet' },
@@ -68,43 +75,6 @@ return {
 	s({ trig = 'snt', snippetType = 'autosnippet' },
 		fmta(
 			'\\unit{<>}',
-			{
-				i(1),
-			}
-		)
-	),
-
-	s({ trig = 'tbf', snippetType = 'autosnippet' },
-		fmta(
-			'\\textbf{<>}',
-			{
-				i(1),
-			}
-		)
-	),
-
-	s({ trig = 'tlc', snippetType = 'autosnippet' },
-		fmta(
-			'\\textit{<>}',
-			{
-				i(1),
-			}
-		)
-	),
-
-	s({ trig = 'tsp', snippetType = 'autosnippet' },
-		fmta(
-			'\\textsuperscript{<>}',
-			{
-				i(1),
-			}
-		)
-	),
-
-
-	s({ trig = 'tsb', snippetType = 'autosnippet' },
-		fmta(
-			'\\textsubscript{<>}',
 			{
 				i(1),
 			}

@@ -3,7 +3,7 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
-	s({ trig = 'upa', snippetType = 'autosnippet' },
+	s({ trig = 'pkg', snippetType = 'autosnippet' },
 		fmta(
 			'\\usepackage{<>}',
 			{
@@ -13,7 +13,7 @@ return {
 		{ condition = helper.line_begin }
 	),
 
-	s({ trig = 'opa', snippetType = 'autosnippet' },
+	s({ trig = 'pks', snippetType = 'autosnippet' },
 		fmta(
 			'\\usepackage[<>]{<>}',
 			{

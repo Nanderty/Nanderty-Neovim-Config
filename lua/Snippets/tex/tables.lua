@@ -6,13 +6,13 @@ return {
 		fmta(
 			[[
 \begin{table}[!h]
+	\caption{<>
+	}
+	\label{tbl:<>}
 	\centering
 	\begin{tabular}{ <> }
 		<>
 	\end{tabular}
-	\caption{<>
-	}
-	\label{tbl:<>}
 \end{table}
 ]],
 			{
@@ -29,13 +29,13 @@ return {
 		fmta(
 			[[
 \begin{table}[!h]
+	\caption{<>
+	}
+	\label{tbl:<>}
 	\centering
 	\begin{tabularx}{\textwidth}{ <> }
 		<>
 	\end{tabularx}
-	\caption{<>
-	}
-	\label{tbl:<>}
 \end{table}
 ]],
 			{
