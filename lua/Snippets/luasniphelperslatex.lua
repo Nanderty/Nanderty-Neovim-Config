@@ -17,6 +17,10 @@ tex.in_enumerate = function()
 	return tex.in_env('enumerate')
 end
 
+tex.in_itemize = function()
+	return tex.in_env('itemize')
+end
+
 tex.in_figure = function()
 	return tex.in_env('figure')
 end

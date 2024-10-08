@@ -11,6 +11,7 @@ return {
 	caption = {
 		<>
 	},
+	label = <>,
 ]{<>}
 ]],
 			{
@@ -18,6 +19,7 @@ return {
 				i(2),
 				i(3),
 				i(4),
+				i(5),
 			}
 		),
 		{ condition = helper.line_begin }

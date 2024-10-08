@@ -30,7 +30,7 @@ return {
 \begin{scheme}[!h]
 	\centering
 	\schemestart
-		\chemname{
+		\chemname {
 			\chemfig {
 				<>
 			}
@@ -122,7 +122,7 @@ return {
 	s({ trig = 'nmi', snippetType = 'autosnippet' },
 		fmta(
 			[[
-\chemnameinit{
+\chemnameinit {
 	<>
 }
 			]],
@@ -201,7 +201,7 @@ return {
 	s({ trig = 'nme', snippetType = 'autosnippet' },
 		fmta(
 			[[
-\chemname{
+\chemname {
 	<>
 }{<>}
 ]],
@@ -230,10 +230,9 @@ return {
 
 	s({ trig = 'rfr', snippetType = 'autosnippet' },
 		fmta(
-			[[ \cref{<>:<>}]],
+			[[ \cref{<>}]],
 			{
 				i(1),
-				i(2),
 			}
 		)
 	),
