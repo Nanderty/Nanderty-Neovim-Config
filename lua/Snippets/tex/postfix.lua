@@ -2,7 +2,7 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
-	s({ trig = 'bgn', snippetType = 'autosnippet' },
+	s({ trig = 'lsls', snippetType = 'autosnippet' },
 		fmta(
 			[[
 \lstinputlisting[
@@ -11,7 +11,7 @@ return {
 	caption = {
 		<>
 	},
-	label = <>,
+	label = lst:<>,
 ]{<>}
 ]],
 			{

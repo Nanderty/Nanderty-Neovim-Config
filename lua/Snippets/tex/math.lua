@@ -65,13 +65,11 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = 'hhn', snippetType = 'autosnippet' },
-		fmta(
-			'\\num{<>}',
-			{
-				i(1),
-			}
-		)
+	s({ trig = 'prt', snippetType = 'autosnippet' },
+		{
+			t('\\partial ')
+		},
+		{ condition = tex.in_mathzone }
 	),
 
 	s({ trig = 'mcl', snippetType = 'autosnippet' },
@@ -102,9 +100,40 @@ return {
 		),
 		{ condition = tex.in_mathzone }
 	),
+
+	s({ trig = "tld", snippetType = "autosnippet" },
+		fmta(
+			'\\tilde{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
 	s({ trig = "vrl", snippetType = "autosnippet" },
 		fmta(
 			'\\overline{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "bar", snippetType = "autosnippet" },
+		fmta(
+			'\\bar{<>}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "bsl", snippetType = "autosnippet" },
+		fmta(
+			'\\boldsymbol{<>}',
 			{
 				i(1),
 			}
@@ -174,9 +203,9 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = 'str', snippetType = 'autosnippet' },
+	s({ trig = 'dgg', snippetType = 'autosnippet' },
 		{
-			t('\\star '),
+			t('\\dagger '),
 		},
 		{ condition = tex.in_mathzone }
 	),
@@ -230,9 +259,33 @@ return {
 		{ condition = tex.in_mathzone }
 	),
 
-	s({ trig = "det", snippetType = "autosnippet" },
+	s({ trig = "dets", snippetType = "autosnippet" },
 		fmta(
 			'\\det{(<>)}',
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "detm", snippetType = "autosnippet" },
+		fmta([[\det{\begin{vmatrix}
+	<>
+\end{vmatrix}}
+]],
+			{
+				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "mtrx", snippetType = "autosnippet" },
+		fmta([[\begin{pmatrix}
+	<>
+\end{pmatrix}
+]],
 			{
 				i(1),
 			}
@@ -252,7 +305,7 @@ return {
 
 	s({ trig = "exp", snippetType = "autosnippet" },
 		fmta(
-			'e^{<>}',
+			'\\exp\\left(<>\\right)',
 			{
 				i(1),
 			}
@@ -262,7 +315,7 @@ return {
 
 	s({ trig = "bra", snippetType = "autosnippet" },
 		fmta(
-			'\\Bra{<>}',
+			'\\left\\langle <>\\right|',
 			{
 				i(1),
 			}
@@ -272,9 +325,20 @@ return {
 
 	s({ trig = "ket", snippetType = "autosnippet" },
 		fmta(
-			'\\Ket{<>}',
+			'\\left| <>\\right\\rangle',
 			{
 				i(1),
+			}
+		),
+		{ condition = tex.in_mathzone }
+	),
+
+	s({ trig = "brkt", snippetType = "autosnippet" },
+		fmta(
+			'\\left\\langle <>\\middle| <>\\right\\rangle',
+			{
+				i(1),
+				i(2),
 			}
 		),
 		{ condition = tex.in_mathzone }

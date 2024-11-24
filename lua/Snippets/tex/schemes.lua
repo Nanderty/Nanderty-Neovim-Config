@@ -7,9 +7,11 @@ return {
 			[[
 \begin{scheme}[!h]
 	\centering
-	\chemfig {
-		<>
-	}
+	\chemname {
+		\chemfig {
+			<>
+		}
+	}{<>}
 	\caption{<>
 	}
 	\label{sch:<>}
@@ -19,6 +21,7 @@ return {
 				i(1),
 				i(2),
 				i(3),
+				i(4),
 			}
 		),
 		{ condition = helper.line_begin }
@@ -34,7 +37,7 @@ return {
 			\chemfig {
 				<>
 			}
-		}{}
+		}{<>}
 	\schemestop
 	\caption{<>
 	}
@@ -45,6 +48,7 @@ return {
 				i(1),
 				i(2),
 				i(3),
+				i(4),
 			}
 		),
 		{ condition = helper.line_begin }

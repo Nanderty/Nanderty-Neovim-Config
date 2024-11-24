@@ -68,7 +68,7 @@ return {
 
 	s({ trig = 'zet', snippetType = 'autosnippet' },
 		{
-			t('\\Zeta '),
+			t('\\zeta '),
 		},
 		{ condition = tex.in_mathzone }
 	),

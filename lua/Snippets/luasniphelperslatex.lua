@@ -29,4 +29,8 @@ tex.in_scheme = function()
 	return tex.in_env('scheme')
 end
 
+tex.in_table = function()
+	return tex.in_env('table')
+end
+
 return tex

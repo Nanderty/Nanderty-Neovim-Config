@@ -48,4 +48,34 @@ return {
 		{ condition = helper.line_begin }
 	),
 
+	s({ trig = "mcl", snippetType = "autosnippet" },
+		fmta(
+			'\\multicolumn{<>}{<>}{<>}',
+			{
+				i(1),
+				i(2),
+				i(3),
+			}
+		),
+		{ condition = tex.in_table }
+	),
+
+	s({ trig = "cln", snippetType = "autosnippet" },
+		fmta(
+			'\\cline{<>-<>}',
+			{
+				i(1),
+				i(2),
+			}
+		),
+		{ condition = tex.in_table }
+	),
+
+	s({ trig = 'hln', snippetType = 'autosnippet' },
+		{
+			t('\\hline'),
+		},
+		{ condition = tex.in_table }
+	),
+
 }

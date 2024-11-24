@@ -63,7 +63,7 @@ return {
 		)
 	),
 
-	s({ trig = 'snr', snippetType = 'autosnippet' },
+	s({ trig = 'nmb', snippetType = 'autosnippet' },
 		fmta(
 			'\\num{<>}',
 			{

@@ -3,7 +3,27 @@ local helper = require('Snippets.luasniphelpers')
 
 return {
 
-
+	s({ trig = 'tikzfig', snippetType = 'autosnippet' },
+		fmta(
+			[[
+\begin{figure}[!h]
+	\centering
+		\begin{tikzpicture}
+			<>
+		\end{tikzpicture}
+	\caption{<>
+	}
+	\label{fig:<>}
+\end{figure}
+]],
+			{
+				i(1),
+				i(2),
+				i(3),
+			}
+		),
+		{ condition = helper.line_begin }
+	),
 
 	s({ trig = 'imfig', snippetType = 'autosnippet' },
 		fmta(
@@ -33,10 +53,7 @@ return {
 			[[
 \begin{figure}[!h]
 	\centering
-	\resizebox
-	{<>}
-	{!}
-	{\input{<>}}
+	{\includegraphics[<>]{<>}}
 	\caption{<>
 	}
 	\label{fig:<>}
