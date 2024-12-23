@@ -295,7 +295,7 @@ return {
 
 	s({ trig = "ln", snippetType = "autosnippet" },
 		fmta(
-			'\\ln{(<>)}',
+			'\\ln{\\left(<>\\right)}',
 			{
 				i(1),
 			}

@@ -1,6 +1,6 @@
 return {
 	{
-		dir = ' ',
+		dir = '..',
 		name = 'keymaps',
 		lazy = false,
 		init = function()

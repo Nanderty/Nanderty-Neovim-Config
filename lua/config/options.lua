@@ -1,6 +1,6 @@
 return {
 	{
-		dir = '',
+		dir = '.',
 		name = 'options',
 		lazy = false,
 		init = function()
